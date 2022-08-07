@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+  
+  <canvas width="600" height="400"> 
+  </canvas>
+
+  <script>
+  
+  var tela = document.querySelector('canvas'); 
+  var pincel = tela.getContext('2d'); 
+
+  pincel.fillStyle='grey';
+  pincel.fillRect(0,0,600,400);
+ 
+  pincel.fillStyle='white';
+  pincel.lineWidth=3;
+
+  pincel.strokeStyle='darkblue';
+
+  pincel.beginPath(); //circulo preenchimento
+  pincel.arc(300, 200, 145, 0, 2*3.14);
+  pincel.fill();
+
+  pincel.beginPath(); //circulo externo
+  pincel.arc(300, 200, 145, 0, 2*3.14);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno N
+  pincel.arc(300, 200, 135, 4.323, 5.101);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno NE
+  pincel.arc(300, 200, 135, 5.163, 5.592);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno E
+  pincel.arc(300, 200, 135, 5.66, 0.62);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno SE
+  pincel.arc(300, 200, 135, 0.688, 1.117);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno S
+  pincel.arc(300, 200, 135, 1.179, 1.957);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno SO
+  pincel.arc(300, 200, 135, 2.023, 2.452);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno O
+  pincel.arc(300, 200, 135, 2.52, Math.PI+0.62);
+  pincel.stroke();
+
+  pincel.beginPath(); //circulo interno NO =
+  pincel.arc(300, 200, 135, Math.PI+0.688, Math.PI+1.117);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico norte superior esquerdo
+  pincel.ellipse(300, 50, 130, 105, 0, 2, 2.49, false);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico norte superior direito
+  pincel.ellipse(300, 50, 130, 105, 0, 0.65, 1.15, false);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico norte inferior
+  pincel.ellipse(300, 50, 140, 115, 0, 0.665, 2.47);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico sul inferior esquerdo
+  pincel.ellipse(300, 350, 130, 105, 0, -2, -2.49, true);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico sul inferior direito
+  pincel.ellipse(300, 350, 130, 105, 0, -0.65, -1.15, true);
+  pincel.stroke();
+
+  pincel.beginPath(); //tropico sul superior
+  pincel.ellipse(300, 350, 140, 115, 0, 3.81, 5.62);
+  pincel.stroke();
+
+  pincel.beginPath(); //polo norte superior
+  pincel.ellipse(300, 50, 60, 45, 0, 0.6, 2.55);
+  pincel.stroke();
+
+  pincel.beginPath(); //polo norte inferior esquerdo
+  pincel.ellipse(300, 50, 70, 55, 0, 2.05, 2.58);
+  pincel.stroke();
+
+  pincel.beginPath(); //polo norte inferior direito
+  pincel.ellipse(300, 50, 70, 55, 0, 0.55, 1.1);
+  pincel.stroke();
+
+  pincel.beginPath(); //polo sul inferior
+  pincel.ellipse(300, 350, 60, 45, 0, 3.71, -0.58);
+  pincel.stroke();
+
+  pincel.beginPath(); // polo sul superior lado esquerdo -------
+  pincel.ellipse(300, 350, 70, 55, 3.15, 0.34*Math.PI, 0.18*Math.PI, true);
+  pincel.stroke();
+
+  pincel.beginPath(); // polo sul superior lado direito
+  pincel.ellipse(300, 350, 70, 55, 0, -0.17*Math.PI, -0.35*Math.PI, true);
+  pincel.stroke();
+
+  pincel.beginPath(); //elipse central NE
+  pincel.ellipse(300, 200, 60, 120, Math.PI, (Math.PI/2)-5.7, (Math.PI/2)-5.17);
+  pincel.stroke();
+
+  pincel.beginPath(); //elipse central SE
+  pincel.ellipse(300, 200, 60, 120, Math.PI, Math.PI-5.82, Math.PI-5.27);
+  pincel.stroke();
+
+  pincel.beginPath(); //elipse central SO
+  pincel.ellipse(300, 200, 60, 120, Math.PI, 5.27, 5.82);
+  pincel.stroke();
+
+  pincel.beginPath(); //elipse central NO =
+  pincel.ellipse(300, 200, 60, 120, Math.PI, 0.46, 1.01);
+  pincel.stroke();
+
+  pincel.fillStyle='black';
+
+  pincel.font = "300 28px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("1903", 300, 135);
+
+  pincel.font = "600 64px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("GRÊMIO", 300, 210);
+
+  pincel.font = "300 28px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("FBPA", 300, 275);
+
+  </script>
+
+</html>
